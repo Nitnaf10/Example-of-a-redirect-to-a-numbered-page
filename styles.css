@@ -1,64 +1,145 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+/* Import Google Icons */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 
-*,
-*::before,
-*::after{box-sizing:border-box}
-
-html,body{height:100%}
-body{
-  font-family:"Quicksand",sans-serif;
-  margin:0;
-  padding:1rem;
-  font-size:clamp(0.9rem,1.6vw,1.1rem);
-  line-height:1.4;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:0.75rem;
-  align-items:flex-start;
-  width:100%;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffe29f, #ffa99f, #ff719a);
+  color: #333;
+  text-align: center;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.numinput{
-  background:#e0f7fa;
-  border-radius:0.5em;
-  display:flex;
-  align-items:center;
-  gap:0.5rem;
-  padding:0.45rem;
-  box-shadow:0 2px 5px rgba(0,0,0,0.1);
-  flex:1 1 clamp(10rem,30vw,18rem);
-  min-width:10ch;
-  max-width:100%;
-  margin:0.5rem;
+/* Titre animé */
+h1 {
+  font-size: 2.2rem;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
 }
 
-.numinput>p{margin:0;padding:0 0.5rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-
-input[type="number"]{
-  border:none;
-  background:transparent;
-  font-size:1rem;
-  text-align:center;
-  color:#333;
-  padding:0.3rem 0.6rem;
-  -moz-appearance:textfield;
-  flex:0 1 6ch;
-  min-width:4ch;
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-8px);}
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
-
-button{
-  padding:0.5rem 0.8rem;
-  background:#007bff;
-  color:#fff;
-  border:none;
-  border-radius:4px;
-  cursor:pointer;
-  flex:0 0 auto;
+/* Texte */
+p {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0.5rem 0;
 }
-button:hover{background:#0056b3}
 
-input[type=number]:focus{outline:none;border-bottom:2px solid #007bff;color:#007bff;padding-bottom:calc(0.3rem - 2px)}
+/* Bloc input + compteur */
+.numinput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.numinput input {
+  width: 100px;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  text-align: center;
+  outline: none;
+}
+
+.numinput p {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Bouton stylisé */
+button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.4rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50px;
+  background: #ff4081;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #e73370;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Icône Google */
+.material-symbols-outlined {
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+
+/* Glow au focus */
+input:focus {
+  box-shadow: 0 0 8px #fff;
+}
+
+/* --- Responsive --- */
+
+/* Petits écrans */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .numinput {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .numinput input {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+  }
+}
+
+/* Tablettes */
+@media (min-width: 601px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .numinput input {
+    width: 120px;
+  }
+}
