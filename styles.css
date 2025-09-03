@@ -60,7 +60,7 @@ input[type=number]:focus {
 }
 
 @media (max-width: 10cm) {
-  :root { --scale-factor: 0.85; }
+  :root { --scale-factor: 1.5; }
 
   .numinput {
     transform-origin: top center;
