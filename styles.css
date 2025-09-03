@@ -1,106 +1,60 @@
-/* Import Google Icons */
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
-
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #ffe29f, #ffa99f, #ff719a);
-  color: #333;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
   text-align: center;
   padding: 5vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2vh;
+  gap: 2rem;
 }
 
-/* Titre animé */
 h1 {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
-  color: #fff;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-  animation: bounce 2s infinite;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  margin: 0;
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0);}
-  50% { transform: translateY(-0.6rem);}
-}
-
-/* Texte */
 p {
   font-size: clamp(1rem, 3vw, 1.2rem);
-  color: #fff;
   margin: 0.5rem 0;
 }
 
-/* Bloc input + compteur */
 .numinput {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  background: rgba(255,255,255,0.2);
-  border-radius: 1rem;
-  padding: 1rem 2rem;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  flex-wrap: wrap; /* permet de passer en colonne tout seul */
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .numinput input {
-  flex: 1 1 120px; /* largeur mini 120px mais s'adapte */
+  flex: 1 1 120px;
   max-width: 200px;
   padding: 0.6rem;
-  border: none;
-  border-radius: 0.6rem;
-  font-size: clamp(1rem, 3vw, 1.2rem);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
   text-align: center;
-  outline: none;
 }
 
-.numinput p {
+.numinput span {
+  font-size: 1rem;
   font-weight: bold;
-  color: #fff;
-  font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
-/* Bouton stylisé */
 button {
-  margin-top: 1rem;
-  padding: 0.8rem 1.4rem;
-  font-size: clamp(1rem, 3vw, 1.1rem);
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
   border: none;
-  border-radius: 50px;
-  background: #ff4081;
+  border-radius: 6px;
+  background: #007bff;
   color: white;
-  font-weight: bold;
   cursor: pointer;
-  transition: transform 0.2s, background 0.3s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  width: fit-content;
-  align-self: center;
+  transition: background 0.2s;
 }
 
 button:hover {
-  transform: scale(1.05);
-  background: #e73370;
-}
-
-button:active {
-  transform: scale(0.95);
-}
-
-/* Icône Google */
-.material-symbols-outlined {
-  font-size: 1.4em;
-  vertical-align: middle;
-}
-
-/* Glow au focus */
-input:focus {
-  box-shadow: 0 0 8px #fff;
+  background: #0056b3;
 }
