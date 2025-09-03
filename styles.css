@@ -62,16 +62,9 @@ input[type=number]:focus {
 @media (max-width: 10cm) {
   :root { --scale-factor: 1.5; }
 
-  .numinput {
-    transform-origin: top center;
-    transform: scale(var(--scale-factor));
-    backface-visibility: hidden;
-    -webkit-font-smoothing: antialiased;
-    margin: calc(1em * var(--scale-factor));
-  }
-
-  button, input[type="number"] {
-    min-width: 3rem;
-    min-height: 2.2rem;
+  body{
+  transform-origin: center center;
+  overflow: hidden;
+  transform: scale(2);
   }
 }
