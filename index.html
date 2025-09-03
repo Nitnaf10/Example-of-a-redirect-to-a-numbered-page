@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirect to page</title>
   <link rel="stylesheet" href="styles.css">
   <script>
@@ -23,12 +24,9 @@
 <body>
   <h1>Redirect to page</h1>
   <p>Enter a page number:</p>
-
-  <div class="numinput">
-    <input type="number" id="pageInput" min="0" max="391" value="0" required>
-    <span>/ 391</span>
-  </div>
-
+  <input type="number" id="pageInput" min="0" max="391" value="0" required>
+  <p>/</p>
+  <p>391</p>
   <button onclick="redirectToPage()">Go</button>
 </body>
 </html>
