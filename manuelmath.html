@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Redirection vers la page</title>
+	<link rel="stylesheet" href="styles.css">
+	<script>
+		document.addEventListener('keydown', function(event) {
+			if (event.key == 'Enter') {
+				redirectToPage();
+			}
+		});
+
+		function redirectToPage() {
+			const pageNumber = document.getElementById('pageInput').value;
+			if (pageNumber >= 0 && pageNumber <= 391) {
+				window.location.href = `https://exobank.hachette-livre.fr/contents/final/9782401058712-fxl/OEBPS/page${pageNumber}.xhtml`;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Redirection vers la page</h1>
+	<p>Entrez un numéro de page:</p>
+	<div class="numinput">
+		<input type="number" id="pageInput" min="0" max="391" value="0" required>
+		<p>/</p>
+		<p>391</p>
+	</div>
+	<br>
+	<button onclick="redirectToPage()">Aller à la page</button>
+</body>
+</html>

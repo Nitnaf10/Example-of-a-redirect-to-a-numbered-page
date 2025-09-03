@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+body {
+    text-align: center;
+}
+
+.numinput {
+    font-family: "Quicksand", sans-serif;
+    padding: 0.5em;
+    background-color: #e0f7fa;
+    border-radius: 0.5em;
+    font-size: 1rem;
+    display: inline-flex;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: min-content;
+    margin: 1em;
+}
+
+.numinput > p {
+    padding: 0 1em;
+}
+
+input[type="number"] {
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    color: #333;
+    padding: 0.5em 1em;
+    transition: 0.3s ease-in-out;
+    -moz-appearance: textfield; /* Pour Firefox */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type=number]:focus {
+    outline: none;
+    border-bottom: 2px solid #007bff; 
+    color: #007bff; 
+    padding-bottom: calc(0.5em - 2px);
+}
