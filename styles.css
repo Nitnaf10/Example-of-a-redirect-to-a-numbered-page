@@ -4,77 +4,61 @@
 *::before,
 *::after{box-sizing:border-box}
 
+html,body{height:100%}
 body{
-  text-align:center;
+  font-family:"Quicksand",sans-serif;
   margin:0;
   padding:1rem;
-  font-size:1rem;
+  font-size:clamp(0.9rem,1.6vw,1.1rem);
   line-height:1.4;
-  min-width:20ch;
-  max-width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:0.75rem;
+  align-items:flex-start;
+  width:100%;
 }
 
 .numinput{
-  font-family:"Quicksand",sans-serif;
-  padding:0.5em;
-  background-color:#e0f7fa;
+  background:#e0f7fa;
   border-radius:0.5em;
-  font-size:1rem;
-  display:inline-flex;
+  display:flex;
   align-items:center;
   gap:0.5rem;
+  padding:0.45rem;
   box-shadow:0 2px 5px rgba(0,0,0,0.1);
-  width:auto;
+  flex:1 1 clamp(10rem,30vw,18rem);
+  min-width:10ch;
   max-width:100%;
-  margin:1em;
+  margin:0.5rem;
 }
 
-.numinput>p{
-  padding:0 1em;
-  margin:0;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
+.numinput>p{margin:0;padding:0 0.5rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 input[type="number"]{
   border:none;
   background:transparent;
   font-size:1rem;
-  font-family:"Quicksand",sans-serif;
   text-align:center;
   color:#333;
-  padding:0.5em 1em;
-  transition:0.3s ease-in-out;
+  padding:0.3rem 0.6rem;
   -moz-appearance:textfield;
+  flex:0 1 6ch;
   min-width:4ch;
-  max-width:40ch;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button{
-  -webkit-appearance:none;
-  margin:0;
-}
+input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 
 button{
-  padding:10px 15px;
-  background-color:#007bff;
-  color:white;
+  padding:0.5rem 0.8rem;
+  background:#007bff;
+  color:#fff;
   border:none;
   border-radius:4px;
   cursor:pointer;
-  transition:background-color 0.3s ease-in-out;
-  flex-shrink:0;
+  flex:0 0 auto;
 }
+button:hover{background:#0056b3}
 
-button:hover{
-  background-color:color-mix(in srgb,#007bff 70%,black);
-}
-
-input[type=number]:focus{
-  outline:none;
-  border-bottom:2px solid #007bff;
-  color:#007bff;
-  padding-bottom:calc(0.5em - 2px);
-}
+input[type=number]:focus{outline:none;border-bottom:2px solid #007bff;color:#007bff;padding-bottom:calc(0.3rem - 2px)}
