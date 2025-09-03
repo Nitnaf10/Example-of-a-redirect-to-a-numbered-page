@@ -29,7 +29,7 @@ input[type="number"] {
     color: #333;
     padding: 0.5em 1em;
     transition: 0.3s ease-in-out;
-    -moz-appearance: textfield; /* Pour Firefox */
+    -moz-appearance: textfield;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -54,7 +54,24 @@ button:hover {
 
 input[type=number]:focus {
     outline: none;
-    border-bottom: 2px solid #007bff; 
-    color: #007bff; 
+    border-bottom: 2px solid #007bff;
+    color: #007bff;
     padding-bottom: calc(0.5em - 2px);
+}
+
+@media (max-width: 10cm) {
+  :root { --scale-factor: 0.85; }
+
+  .numinput {
+    transform-origin: top center;
+    transform: scale(var(--scale-factor));
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    margin: calc(1em * var(--scale-factor));
+  }
+
+  button, input[type="number"] {
+    min-width: 3rem;
+    min-height: 2.2rem;
+  }
 }
