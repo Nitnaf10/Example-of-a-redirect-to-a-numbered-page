@@ -1,60 +1,58 @@
 body {
   font-family: Arial, sans-serif;
-  background: #e6f2ff; /* light blue */
-  color: #004080; /* dark blue text */
-  text-align: center;
-  padding: 10vw 5vw;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
+  background: #e6f2ff;   /* light blue */
+  color: #004080;        /* dark blue */
+  padding: 3rem 2rem;
   margin: 0;
 }
 
+/* Gros titre */
 h1 {
-  font-size: clamp(1.5rem, 5vw, 2rem);
-  margin: 0;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
+/* Texte explicatif */
 p {
-  font-size: clamp(1rem, 3vw, 1.1rem);
-  margin: 0;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
 }
 
+/* Bloc input */
 .numinput {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .numinput input {
-  flex: 1 1 120px;
-  max-width: 200px;
-  padding: 0.6rem;
-  border: 1px solid #004080;
-  border-radius: 4px;
-  font-size: 1rem;
-  text-align: center;
+  width: 160px;
+  padding: 0.8rem 1rem;
+  font-size: 1.3rem;
+  border: 2px solid #004080;
+  border-radius: 6px;
   background: #ffffff;
   color: #004080;
-}
-
-.numinput span {
-  font-size: 1rem;
   font-weight: bold;
 }
 
+.numinput span {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Gros bouton */
 button {
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  border: 1px solid #004080;
-  border-radius: 4px;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
   background: #004080;
   color: #ffffff;
   cursor: pointer;
+  transition: background 0.2s;
 }
 
 button:hover {
