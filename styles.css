@@ -6,30 +6,30 @@ body {
   background: linear-gradient(135deg, #ffe29f, #ffa99f, #ff719a);
   color: #333;
   text-align: center;
-  padding: 2rem;
+  padding: 5vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 2vh;
 }
 
 /* Titre animé */
 h1 {
-  font-size: 2.2rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   color: #fff;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-  margin-bottom: 1rem;
   animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0);}
-  50% { transform: translateY(-8px);}
+  50% { transform: translateY(-0.6rem);}
 }
 
 /* Texte */
 p {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   color: #fff;
   margin: 0.5rem 0;
 }
@@ -39,22 +39,22 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
   background: rgba(255,255,255,0.2);
-  border-radius: 12px;
-  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
   backdrop-filter: blur(6px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  margin-top: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* permet de passer en colonne tout seul */
 }
 
 .numinput input {
-  width: 100px;
+  flex: 1 1 120px; /* largeur mini 120px mais s'adapte */
+  max-width: 200px;
   padding: 0.6rem;
   border: none;
-  border-radius: 8px;
-  font-size: 1.2rem;
+  border-radius: 0.6rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   text-align: center;
   outline: none;
 }
@@ -62,13 +62,14 @@ p {
 .numinput p {
   font-weight: bold;
   color: #fff;
+  font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
 /* Bouton stylisé */
 button {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   padding: 0.8rem 1.4rem;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 3vw, 1.1rem);
   border: none;
   border-radius: 50px;
   background: #ff4081;
@@ -78,11 +79,14 @@ button {
   transition: transform 0.2s, background 0.3s;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  width: fit-content;
+  align-self: center;
 }
 
 button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   background: #e73370;
 }
 
@@ -92,54 +96,11 @@ button:active {
 
 /* Icône Google */
 .material-symbols-outlined {
-  font-size: 1.4rem;
+  font-size: 1.4em;
   vertical-align: middle;
 }
 
 /* Glow au focus */
 input:focus {
   box-shadow: 0 0 8px #fff;
-}
-
-/* --- Responsive --- */
-
-/* Petits écrans */
-@media (max-width: 600px) {
-  body {
-    padding: 1rem;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  .numinput {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .numinput input {
-    width: 80%;
-    font-size: 1rem;
-  }
-
-  button {
-    width: 100%;
-    justify-content: center;
-    font-size: 1rem;
-  }
-}
-
-/* Tablettes */
-@media (min-width: 601px) and (max-width: 1024px) {
-  h1 {
-    font-size: 2rem;
-  }
-  .numinput input {
-    width: 120px;
-  }
 }
