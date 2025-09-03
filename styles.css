@@ -59,12 +59,14 @@ input[type=number]:focus {
     padding-bottom: calc(0.5em - 2px);
 }
 
-@media (max-width: 10cm) {
-  :root { --scale-factor: 1.5; }
-
-  body{
-  transform-origin: center center;
-  overflow: hidden;
-  transform: scale(2);
+@media (max-width: 380px) {
+  body {
+    transform-origin: top center;
+    transform: scale(2);
+    width: 50%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: visible;
+    will-change: transform;
   }
 }
